@@ -4,6 +4,6 @@ class Year
   end
 
   def is_leap_year
-    true
+    (@year % 4) == 0
   end
 end
