@@ -4,6 +4,10 @@ class Year
   end
 
   def is_leap_year
-    (@year % 100 == 0) ? (@year % 400 != 0) ? false : true : @year % 4 == 0
+    is_divisible_by(is_divisible_by(100) ? 400 : 4)
+  end
+
+  def is_divisible_by(value)
+    @year % value == 0
   end
 end
